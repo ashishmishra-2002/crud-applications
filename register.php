@@ -23,7 +23,7 @@ function is_valid_name($name) {
         return false;
     }
 
-    if (preg_match('/[^a-zA-Z0-9]/', $name)) {
+    if (!preg_match('/[!@#$%^&*()_+{}\[\]:;<>,.?~\\|-]/', $name)) {
         return false;
     }
     
